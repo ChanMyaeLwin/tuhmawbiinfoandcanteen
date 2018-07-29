@@ -34,9 +34,12 @@ app.post('/webhook/', function(req, res) {
 	for (let i = 0; i < messaging_events.length; i++) {
 		let event = messaging_events[i]
 		let sender = event.sender.id
-		if (event.message && event.message.text) {
-			let text = event.message.text
-			sendText(sender, "Text echo: " + text.substring(0, 100))
+	//	if (event.message && event.message.text) {
+	//		let text = event.message.text
+	//		sendText(sender, "Text echo: " + text.substring(0, 100))
+	if (event.message && event.message.text== "History" or event.message.text=="Tell Me History"){
+		sendText(sender, "History of Technological University (Hmawbi)/n Our University was opened as a Technical High School on 23-10-1989 and upgraded as a Government Technical Institute on 1-12-1998 and also upgraded as a Government Technological College on 8-1-2001. Finally, This is upgraded as a Technological University on 20-1-2007.")
+	}
 		}
 	}
 	res.sendStatus(200)

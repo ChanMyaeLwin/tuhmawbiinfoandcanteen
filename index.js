@@ -41,6 +41,27 @@ app.post('/webhook/', function(req, res) {
 		sendText(sender, "History of Technological University (Hmawbi)/n Our University was opened as a Technical High School on 23-10-1989 and upgraded as a Government Technical Institute on 1-12-1998 and also upgraded as a Government Technological College on 8-1-2001. Finally, This is upgraded as a Technological University on 20-1-2007.")
 	  }
 
+	if (event.message && event.message.text== "Location and Area"){
+			sendText(sender, "The Technological University of Hmawbi is located on Between mile post 33/3 and 34/0 on the east of Yangon-Pyi highway Hmawbi, Yangon Area (78.04) acres")
+		 }
+	if (event.message && event.message.text== "Our Vision"){
+ 			sendText(sender, "To become internationally recognized, high-ranking University that nurtures highly qualified Engineers and Architects who are needed in building the Nation, Myanmar.")
+ 			}
+  if (event.message && event.message.text== "Our Mission"){
+					sendText(sender, "Fostering our students with strong desire in conducting social activities and intellectually stimulating to qualified Engineers and Architects who understand professional ethics well and creating innovative academic environment for all-around development of community.")
+			}
+	if (event.message && event.message.text== "Address"){
+					sendText(sender, "TU (Hmawbi), Hmawbi Township, Yangon Division,The Republic of the Union of Myanmar")
+			}
+	if (event.message && event.message.text== "Phone No"){
+					sendText(sender, "+95-1-620454")
+			}
+	if (event.message && event.message.text== "Email"){
+		 			sendText(sender, "tuhmawbi@gmail.com")
+		 }
+	if (event.message && event.message.text== "Website"){
+	 		 			sendText(sender, "www.tuhbi.moe-st.gov.mm")
+	 		 }
 	}
 	res.sendStatus(200)
 })
